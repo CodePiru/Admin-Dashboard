@@ -16,8 +16,74 @@ body {
 
 aside {
     height: 100vh;
+    color: white;
     background-color: cornflowerblue;
     grid-area: sb;
+}
+
+#dashboard,
+aside > ul {
+    padding: 1rem;
+}
+
+aside > ul > li {
+    font-weight: bold;
+    padding: 0.60rem;
+}
+
+#dashboard,
+aside > ul > li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+#dashboard::before,
+aside > ul > li::before {
+    content: var(--icon);
+    height: 1.5em;
+    width: 1.5em;
+}
+
+#dashboard::before {
+    --icon: url(./img/icons/view-dashboard.svg);
+}
+
+#home::before {
+    --icon: url(./img/icons/home.svg);
+}
+
+#profile::before {
+    --icon: url(./img/icons/account.svg);
+}
+
+#messages::before {
+    --icon: url(./img/icons/message.svg);
+}
+
+#history::before {
+    --icon: url(./img/icons/history.svg);
+}
+
+#tasks::before {
+    --icon: url(./img/icons/calendar-check.svg);
+}
+
+#communities::before {
+    --icon: url(./img/icons/account-group.svg);
+}
+
+#settings::before {
+    --icon: url(./img/icons/cog.svg);
+}
+
+#support::before {
+    --icon: url(./img/icons/face-agent.svg);
+}
+
+#privacy::before {
+    --icon: url(./img/icons/lock-check.svg);
 }
 
 header {
