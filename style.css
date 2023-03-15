@@ -9,6 +9,7 @@
 body {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
     grid-template-areas:
         "sb hd"
         "sb mc";
@@ -17,7 +18,7 @@ body {
 aside {
     height: 100vh;
     color: white;
-    background-color: cornflowerblue;
+    background-color: #0ea5e9;
     grid-area: sb;
 }
 
@@ -90,7 +91,81 @@ header {
     grid-area: hd;
 }
 
+.profile-picture {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.profile-picture.main {
+    width: 75px;
+    height: 75px;
+}
+
+header > div:first-child {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.search {
+    padding: 10px 40px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+input {
+    height: 1.5rem;
+    background-color: #e2e8f0;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+.profile {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header > div:last-child {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.greeting {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+menu {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+menu > li {
+    background-color: #0ea5e9;
+    color: white;
+    font-weight: bold;
+    border-radius: 1.5rem;
+    padding: 10px 20px;
+    text-align: center;
+}
+
 main {
-    background-color: lightgray;
+    background-color: #e2e8f0;
     grid-area: mc;
 }
