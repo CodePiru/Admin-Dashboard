@@ -91,6 +91,8 @@ aside > ul > li::before {
 
 header {
     grid-area: hd;
+    box-shadow: 2px 2px 5px rgb(189, 189, 189);
+    z-index: 1;
 }
 
 .profile-picture {
@@ -192,6 +194,7 @@ main h3 {
     padding: 2rem;
     border-left: goldenrod 0.5rem solid;
     display: grid;
+    box-shadow: 2px 2px 5px rgb(189, 189, 189);
 }
 
 .card > p {
@@ -211,4 +214,41 @@ main h3 {
 .links > img{
     height: 1.3rem;
     cursor: pointer;
+}
+
+.announcements,
+.trending {
+    padding: 20px;
+    background-color: white;
+    margin: 0 20px;
+    box-shadow: 2px 2px 5px rgb(189, 189, 189);
+    border-radius: 0.5rem;
+}
+
+.announcements p {
+    margin: 10px 0;
+    color: gray;
+    font-size: 0.8rem;
+}
+
+hr {
+    margin: 20px 5px;
+    border: lightgray solid 1px;
+}
+
+.trending {
+    margin-bottom: 20px;
+}
+
+.trending > div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.trendy-project {
+    color: gray;
+    font-size: 0.8rem;
 }
