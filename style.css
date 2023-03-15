@@ -9,13 +9,15 @@
 body {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas:
         "sb hd"
         "sb mc";
 }
 
 aside {
+    position: sticky;
+    top: 0;
     height: 100vh;
     color: white;
     background-color: #0ea5e9;
@@ -140,6 +142,7 @@ header > div:last-child {
 }
 
 .greeting {
+    font-weight: bold;
     padding: 20px;
     display: grid;
     grid-template-columns: auto 1fr;
@@ -168,4 +171,44 @@ menu > li {
 main {
     background-color: #e2e8f0;
     grid-area: mc;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+main h3 {
+    padding: 20px;
+}
+
+.container {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    border-left: goldenrod 0.5rem solid;
+    display: grid;
+}
+
+.card > p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.links {
+    justify-self: end;
+    align-self: end;
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.8rem;
+}
+
+.links > img{
+    height: 1.3rem;
+    cursor: pointer;
 }
